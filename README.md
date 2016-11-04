@@ -1,3 +1,7 @@
+CHROnIC_Collector
+
+Microservice to Communicate with Message Bus (on-prem component)
+
 # boilerplate - Hello World
 
 Any applicable badges (build/documentation/collaboration/licenses should go here
