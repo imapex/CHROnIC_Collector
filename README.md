@@ -110,9 +110,13 @@ source chronic/bin/activate
 pip install -r requirements.txt
 ```
 
+**Set Environment Variables:**
+```
+export chronicbus=<chronic_bus_address, not including http://>
+```
+
 **Execute the app:**
 ```
-./genid.sh
 python app.py
 ```
 
