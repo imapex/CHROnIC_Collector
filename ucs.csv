@@ -1,0 +1,5 @@
+method,url,content_type,soap_action,basic_auth,cookie,post_data,file_key,post_processing,return_data,consolidate_data
+POST,https://%ip%/nuova,text/xml,,,,"<aaaLogin inName='%un%' inPassword='%pw%'></aaaLogin>",,,XML=/aaaLogin;@outCookie=ret1,0
+POST,https://%ip%/nuova,text/xml,,,,"<configResolveClass cookie='%1%' classId='computeBlade' inHierarchical='true'></configResolveClass>",,,"XML=/configResolveClass/outConfigs/computeBlade;@uuid,@dn,@model,@serial,adaptorUnit/@bladeId,adaptorUnit/@model,adaptorUnit/mgmtController/firmwareRunning/@version,adaptorUnit/mgmtController/firmwareRunning/@deployment,computeBoard/processorUnit/@model,mgmtController/firmwareRunning/@version,mgmtController/firmwareRunning/@deployment=ret2",0
+POST,https://%ip%/nuova,text/xml,,,,"<aaaLogout cookie='%1%' inCookie='%1%'></aaaLogout>",,,RETURN=ret2,0
+POST,http://requestb.in/18sox3e1,text/json,,,,%2%,,,NULL,0
